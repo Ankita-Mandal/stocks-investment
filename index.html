@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sstyle.css">
+        <script src="stock.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <title>Business Ideas 2.0</title>
+    </head>
+    <body class="main">
+        <nav class="main-nav">
+            <img src="img/TEC_Logo.png" alt="" class="teclogo">
+            <h1 class="b-title">Business Ideas 2.0</h1>
+            <ul class="options">
+                <li>Home</li>
+                <li>About</li>
+                <li>Speakers</li>
+                <li>Schedule</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <section class="banner">
+            <div class="b-i">
+                <img src="img/Business Ideas Logo.png" class="blogo" alt="">
+                
+            </div>            
+            <div class="capital">
+                <h2 class="c-title">Your Capital</h2>
+                <h2 class="c-amount" id="c-amount">10000</h2>
+                <button class="start-button"><a href="#stock">Start Investing!</a></button>
+                
+            </div>                        
+        </section>
+        
+        <div class="stocks" id="stock">
+            <h1 class="select-stock">Select a stock to invest</h1>
+            <span class="hiddenclickimg" style="display: none;"><img src="img/sample.jpg" width="500"></span>
+            
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-1" id="stock1">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock1"> Stock 1</label></span>
+                
+            </div>
+            
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-2" id="stock2">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock2">Stock 2</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+            
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-3" id="stock3">
+                <span class="hiddenclick" onclick="toggleImage()"> <label for="stock3">Stock 3</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span>     -->
+            </div>
+            
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-4" id="stock4">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock4">Stock 4</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-5" id="stock5">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock5">Stock 5</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-6" id="stock6">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock6">Stock 6</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+            <div class="radio-item">            
+                <input type="radio" name="stock" value="stock-7" id="stock7">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock7">Stock 7</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+            <div class="radio-item">
+               <input type="radio" name="stock" value="stock-8" id="stock8">
+               <span class="hiddenclick" onclick="toggleImage()"> <label for="stock8">Stock 8</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+            <div class="radio-item">
+               <input type="radio" name="stock" value="stock-9" id="stock9">
+               <span class="hiddenclick" onclick="toggleImage()"> <label for="stock9">Stock 9</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+            <div class="radio-item">
+                <input type="radio" name="stock" value="stock-10" id="stock10">
+                <span class="hiddenclick" onclick="toggleImage()"><label for="stock10">Stock 10</label></span>
+                <!-- <span class="hiddenclickimg"> <img src="img/sample.jpg" width="500"></span> -->
+            </div>
+            <div class="confirm-button">
+                <a href="#invest">Confirm Stock</a>
+            </div>
+
+        </div>
+        
+        <div class="invest" id="invest">
+            <h1 class="invest-title">Make an Investment!</h1>
+            <section class="i-amount">
+                <form action="">
+                    <label for="amount">Enter amount:</label>
+                    <input type="number" id="i-amount" placeholder="Amount..." required>
+                    <input type="button" id="invest-button" class="invest-button" value="Invest!" onclick="capitalAfterInvestment()">    
+                </form>
+            </section>            
+        </div>
+        <div class="sell-stock">
+            <button class="sell-button" value="sell-stock" name="sell-button" id="sell-button" onclick="calReturnAmount()" ><a href="#sell">Sell Stock</a></button>
+            <p class="return-text"> The return amount is: <span class="return" id="return"> </span> </p>
+        </div>
+    </body>
+</html>
